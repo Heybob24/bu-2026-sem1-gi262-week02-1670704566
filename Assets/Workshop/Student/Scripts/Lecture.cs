@@ -10,25 +10,41 @@ namespace Assignment
 
         void Start()
         {
-            // LCT01_SyntaxArray();
+            //LCT01_SyntaxArray();
             // LCT02_ArrayInitialize();
-            // LCT03_SyntaxLoop();
+             // LCT03_SyntaxLoop();
             // LCT04_LoopAndArray();
-            // LCT05_Syntax2DArray();
+             LCT05_Syntax2DArray();
             // LCT06_SizeOf2DArray();
             // LCT07_SyntaxNestedLoop();
         }
 
-        #region Lecture
-
         public void LCT01_SyntaxArray()
         {
-            throw new System.NotImplementedException();
+            string[] _ironmanSuit = new string[2];
+            _ironmanSuit[0] = "Mark I";
+            _ironmanSuit[1] = "Mark II";
+            string tonyStarkWear = _ironmanSuit[0];
+            Debug.Log("TonyStarkWear: " + tonyStarkWear);
+            Debug.Log("Room size: " + _ironmanSuit.Length);
+            Debug.Log(_ironmanSuit[0]);
+            Debug.Log(_ironmanSuit[1]);
+            
         }
 
         public void LCT02_ArrayInitialize()
         {
-            throw new System.NotImplementedException();
+            string[] spidermanSuits = new string[] { "Classic", "Black Suit", "Iron Spider" };
+            string[] batmanSuits = new string[2] { "Classic batman", "White Bat" };
+
+            Debug.Log("Room size:" + spidermanSuits.Length);
+            Debug.Log(spidermanSuits[0]);
+            Debug.Log(spidermanSuits[1]);
+            Debug.Log(spidermanSuits[2]);
+
+            Debug.Log("Room size:" + batmanSuits.Length);
+            Debug.Log(batmanSuits[0]);
+            Debug.Log(batmanSuits[1]);
         }
 
         /*
@@ -47,7 +63,14 @@ namespace Assignment
          */
         public void LCT03_SyntaxLoop()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < 10; i++) {
+                Debug.Log("<10 : " + i);
+            }
+            Debug.Log("=================");
+            for (int i = 0; i < 10; i++)
+            {
+                Debug.Log(" <=10 : " + i);
+            }
         }
 
         /*
@@ -79,7 +102,10 @@ namespace Assignment
         public string[] lct04_ironManSuitNames;
         public void LCT04_LoopAndArray()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < lct04_ironManSuitNames.Length; i++)
+            {
+                Debug.Log(lct04_ironManSuitNames[i]);
+            }
         }
 
         /*
@@ -114,7 +140,24 @@ namespace Assignment
          */
         public void LCT05_Syntax2DArray()
         {
-            throw new System.NotImplementedException();
+            int[,] my2dArray = new int[3, 4]
+            {
+                {1,2,3,0},
+                {4,5,6,0},
+                {6,7,8,0},
+            };
+            Debug.Log(my2dArray.GetLength(0));
+            Debug.Log(my2dArray.GetLength(1));
+
+            Debug.Log(my2dArray[1, 2]);
+
+            for (int row = 0; row < my2dArray.GetLength(0); row++)
+            {
+                for (int col = 0; col < my2dArray.GetLength(0); col++)
+                {
+                    Debug.Log(my2dArray[(int)row, (int)col]);
+                }
+            }
         }
 
         /*
@@ -143,7 +186,7 @@ namespace Assignment
          * พารามิเตอร์:
          * - lct06_my2DArray: อาร์เรย์ 2 มิติ (2D array) แก้ไขค่าได้จาก Inspector
          */
-        [Header("LCT06_SizeOf2DArray")]
+        //[Header("LCT06_SizeOf2DArray")]
         public Grid2DInt lct06_my2DArray = new Grid2DInt
         {
             rows = 3,
@@ -237,7 +280,7 @@ namespace Assignment
             throw new System.NotImplementedException();
         }
 
-        #endregion
+        //endregion
 
         private void PrintBoard(string[,] board)
         {
