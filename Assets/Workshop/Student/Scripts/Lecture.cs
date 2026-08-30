@@ -10,13 +10,13 @@ namespace Assignment
 
         void Start()
         {
-            //LCT01_SyntaxArray();
-            // LCT02_ArrayInitialize();
-             // LCT03_SyntaxLoop();
-            // LCT04_LoopAndArray();
-             LCT05_Syntax2DArray();
-            // LCT06_SizeOf2DArray();
-            // LCT07_SyntaxNestedLoop();
+            LCT01_SyntaxArray();
+            LCT02_ArrayInitialize();
+            LCT03_SyntaxLoop();
+            LCT04_LoopAndArray();
+            LCT05_Syntax2DArray();
+            LCT06_SizeOf2DArray();
+            LCT07_SyntaxNestedLoop();
         }
 
         public void LCT01_SyntaxArray()
@@ -29,7 +29,7 @@ namespace Assignment
             Debug.Log("Room size: " + _ironmanSuit.Length);
             Debug.Log(_ironmanSuit[0]);
             Debug.Log(_ironmanSuit[1]);
-            
+
         }
 
         public void LCT02_ArrayInitialize()
@@ -63,7 +63,8 @@ namespace Assignment
          */
         public void LCT03_SyntaxLoop()
         {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 10; i++)
+            {
                 Debug.Log("<10 : " + i);
             }
             Debug.Log("=================");
